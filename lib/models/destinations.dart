@@ -36,14 +36,14 @@ List<Destination> mockDestination = [
       image: 'assets/france.jpg',
       description:
           'Getting ready  for a facation to Tokyo? a beautifull town in japan whose main vehicle is a boat and travels by boat!! there is no way there.',
-      price: 310,
-      duration: '7 Days'),
+      price: 270,
+      duration: '5 Days'),
   const Destination(
       id: 3,
       title: 'Chaws, Italy',
       image: 'assets/italia.jpg',
       description:
           'Getting ready  for a facation to Tokyo? a beautifull town in japan whose main vehicle is a boat and travels by boat!! there is no way there.',
-      price: 310,
-      duration: '7 Days'),
+      price: 190,
+      duration: '3 Days'),
 ];

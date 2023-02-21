@@ -74,7 +74,8 @@ class _HomePageState extends State<HomePage> {
                               fontWeight: FontWeight.w300,
                               fontSize: 16,
                               color: Colors.black38),
-                          prefixIcon: Icon(Icons.search, color: Colors.black38),
+                          prefixIcon:
+                              const Icon(Icons.search, color: Colors.black38),
                           border: InputBorder.none,
                         ),
                       ),
@@ -133,8 +134,9 @@ class _HomePageState extends State<HomePage> {
               //   ),
               // ),
               Container(
-                padding: const EdgeInsets.only(left: defaultMargin),
-                height: 240,
+                padding: const EdgeInsets.only(left: 0),
+                // height: 240,
+                height: 260,
                 width: double.infinity,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
@@ -143,19 +145,23 @@ class _HomePageState extends State<HomePage> {
                       // meski children tapi cuma 1, ga berupa list
                       children: mockDestination
                           .map(
-                            (e) => GestureDetector(
-                              onTap: () {
-                                Get.to(() => DetailPage(
-                                      destination: Destination(
-                                          description: e.description,
-                                          duration: e.duration,
-                                          id: e.id,
-                                          image: e.image,
-                                          price: e.price,
-                                          title: e.title),
-                                    ));
-                              },
-                              child: DestinationCard(e, destination: e),
+                            (e) => Padding(
+                              padding:
+                                  const EdgeInsets.only(left: defaultMargin),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Get.to(() => DetailPage(
+                                        destination: Destination(
+                                            description: e.description,
+                                            duration: e.duration,
+                                            id: e.id,
+                                            image: e.image,
+                                            price: e.price,
+                                            title: e.title),
+                                      ));
+                                },
+                                child: DestinationCard(e, destination: e),
+                              ),
                             ),
                           )
                           .toList(),
@@ -193,7 +199,7 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 30),
               Container(
-                padding: const EdgeInsets.only(left: defaultMargin),
+                padding: const EdgeInsets.only(left: 0),
                 height: 240,
                 width: double.infinity,
                 child: ListView(
@@ -203,19 +209,23 @@ class _HomePageState extends State<HomePage> {
                       // meski children tapi cuma 1, ga berupa list
                       children: mockDestination
                           .map(
-                            (e) => GestureDetector(
-                              onTap: () {
-                                Get.to(() => DetailPage(
-                                      destination: Destination(
-                                          description: e.description,
-                                          duration: e.duration,
-                                          id: e.id,
-                                          image: e.image,
-                                          price: e.price,
-                                          title: e.title),
-                                    ));
-                              },
-                              child: DestinationCard(e, destination: e),
+                            (e) => Padding(
+                              padding:
+                                  const EdgeInsets.only(left: defaultMargin),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Get.to(() => DetailPage(
+                                        destination: Destination(
+                                            description: e.description,
+                                            duration: e.duration,
+                                            id: e.id,
+                                            image: e.image,
+                                            price: e.price,
+                                            title: e.title),
+                                      ));
+                                },
+                                child: DestinationCard(e, destination: e),
+                              ),
                             ),
                           )
                           .toList(),
@@ -223,6 +233,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
+              const SizedBox(height: 30),
             ],
           )
         ],

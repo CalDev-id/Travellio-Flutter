@@ -16,8 +16,7 @@ class _DestinationCardState extends State<DestinationCard> {
   Widget build(BuildContext context) {
     return Container(
         width: 210,
-        height: 270,
-        margin: const EdgeInsets.only(right: 20),
+        height: 300,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(18),
             image: DecorationImage(
@@ -29,16 +28,59 @@ class _DestinationCardState extends State<DestinationCard> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text(widget.destination.title,
-                  style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 18,
-                      color: Colors.white)),
-              Text(widget.destination.duration,
-                  style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w300,
-                      fontSize: 14,
-                      color: Colors.white)),
+              Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        top: 8, bottom: 8, left: 10, right: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(widget.destination.title,
+                                style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 14,
+                                    color: primaryColor)),
+                            Text('Pernah ke sini?',
+                                softWrap: false,
+                                style: GoogleFonts.poppins(
+                                    fontSize: 12, color: Colors.black45)),
+                          ],
+                        ),
+                        Container(
+                          width: 40,
+                          height: 40,
+                          decoration: BoxDecoration(
+                              color: secondaryColor,
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Center(
+                            child: Text(
+                                '\$${widget.destination.price.toString()}',
+                                style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 15,
+                                    color: Colors.white)),
+                          ),
+                        )
+                      ],
+                    ),
+                  )),
+              // Text(widget.destination.title,
+              //     style: GoogleFonts.poppins(
+              //         fontWeight: FontWeight.w500,
+              //         fontSize: 18,
+              //         color: Colors.white)),
+              // Text(widget.destination.duration,
+              //     style: GoogleFonts.poppins(
+              //         fontWeight: FontWeight.w300,
+              //         fontSize: 14,
+              //         color: Colors.white)),
             ],
           ),
         ));
