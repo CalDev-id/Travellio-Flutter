@@ -107,32 +107,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               const SizedBox(height: 30),
-              // Container(
-              //   padding: const EdgeInsets.only(left: defaultMargin),
-              //   width: double.infinity,
-              //   height: 270,
-              //   child: ListView(
-              //     scrollDirection: Axis.horizontal,
-              //     children: [
-              //       mockDestination
-              //           .map((e) => GestureDetector(
-              //                 onTap: () {
-              //                   Get.to(() => DetailPage(
-              //                         destination: Destination(
-              //                             description: e.description,
-              //                             duration: e.duration,
-              //                             id: e.id,
-              //                             image: e.image,
-              //                             price: e.price,
-              //                             title: e.title),
-              //                       ));
-              //                 },
-              //                 child: DestinationCard(e, destination: e),
-              //               ))
-              //           .toList(),
-              //     ],
-              //   ),
-              // ),
               Container(
                 padding: const EdgeInsets.only(left: 0),
                 // height: 240,
@@ -233,7 +207,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 80),
             ],
           )
         ],

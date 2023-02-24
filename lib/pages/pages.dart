@@ -9,3 +9,4 @@ import '../widgets/widget.dart';
 part 'splash_screen.dart';
 part 'home_page.dart';
 part 'detail_page.dart';
+part 'main_page.dart';
